@@ -23,7 +23,7 @@ def hangman():
     guessed_letters = set()
     attempts_left = MAX_ATTEMPTS
 
-    print("🪢 Welcome to Hangman!")
+    print(" Welcome to Hangman!")
     print(f"You have {attempts_left} attempts to guess the word.")
     print(display_word(word, guessed_letters))
 
@@ -31,28 +31,28 @@ def hangman():
         guess = input("Guess a letter: ").strip().lower()
 
         if len(guess) != 1 or not guess.isalpha():
-            print("❌ Please enter a single letter.")
+            print(" Please enter a single letter.")
             continue
 
         if guess in guessed_letters:
-            print("⚠️ You've already guessed that letter.")
+            print(" You've already guessed that letter.")
             continue
 
         guessed_letters.add(guess)
 
         if guess in word:
-            print("✅ Correct!")
+            print(" Correct!")
         else:
             attempts_left -= 1
-            print(f"❌ Wrong! Attempts left: {attempts_left}")
+            print(f" Wrong! Attempts left: {attempts_left}")
 
         print(display_word(word, guessed_letters))
         print()
 
     if set(word) == guessed_letters:
-        print(f"🏆 Congratulations! You guessed the word: {word}")
+        print(f" Congratulations! You guessed the word: {word}")
     else:
-        print(f"💀 Game Over! The word was: {word}")
+        print(f" Game Over! The word was: {word}")
 
 
 if __name__ == "__main__":
