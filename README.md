@@ -1,6 +1,5 @@
-# Hangman 🪢
+# Hangman 
 
-A simple command-line Hangman game in Python.
 
 ## Features
 - Random word selection
